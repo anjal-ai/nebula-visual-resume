@@ -1,11 +1,11 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import type { Engine } from "tsparticles-engine";
+import { Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 
 export const ParticleBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   return (
@@ -27,7 +27,12 @@ export const ParticleBackground = () => {
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "grab",
+              parallax: {
+                enable: true,
+                force: 60,
+                smooth: 10
+              }
             },
             resize: true,
           },
@@ -35,10 +40,12 @@ export const ParticleBackground = () => {
             push: {
               quantity: 4,
             },
-            repulse: {
+            grab: {
               distance: 200,
-              duration: 0.4,
-            },
+              links: {
+                opacity: 0.5
+              }
+            }
           },
         },
         particles: {
@@ -51,6 +58,10 @@ export const ParticleBackground = () => {
             enable: true,
             opacity: 0.3,
             width: 1,
+            triangles: {
+              enable: true,
+              opacity: 0.05
+            }
           },
           collisions: {
             enable: true,
@@ -62,8 +73,13 @@ export const ParticleBackground = () => {
               default: "bounce",
             },
             random: true,
-            speed: 1,
+            speed: 1.5,
             straight: false,
+            attract: {
+              enable: true,
+              rotateX: 600,
+              rotateY: 1200
+            }
           },
           number: {
             density: {
@@ -81,7 +97,12 @@ export const ParticleBackground = () => {
             },
           },
           shape: {
-            type: ["circle", "triangle"],
+            type: ["circle", "triangle", "polygon"],
+            options: {
+              polygon: {
+                sides: 6
+              }
+            }
           },
           size: {
             value: { min: 1, max: 3 },

@@ -51,14 +51,14 @@ export const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-accent-primary to-accent-highlight hover:from-accent-highlight hover:to-accent-primary transition-all duration-300 shadow-lg hover:shadow-accent-primary/25"
+              className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-violet-500/25 transform hover:scale-105"
             >
               View Projects
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-accent-primary/50 hover:bg-accent-primary/10"
+              className="border-violet-500/50 hover:bg-violet-500/10 transform hover:scale-105 transition-all duration-300"
             >
               Contact Me
             </Button>

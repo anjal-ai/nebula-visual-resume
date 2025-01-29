@@ -17,7 +17,7 @@ export const Education = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="education" className="py-20 relative">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export const Education = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="p-6 rounded-lg bg-gradient-to-br from-space-dark/50 to-space-light/50 backdrop-blur-sm border border-white/10 hover:border-accent-primary/50 transition-all duration-300"
+              className="p-6 rounded-lg bg-gradient-to-br from-space-dark/50 to-space-light/50 backdrop-blur-sm border border-white/10 hover:border-accent-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/20"
             >
               <h3 className="text-xl font-semibold text-white mb-2">{item.degree}</h3>
               <p className="text-violet-300 mb-2">{item.school}</p>
