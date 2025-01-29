@@ -27,7 +27,7 @@ export const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-accent-primary to-accent-highlight"
+          className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-accent-primary to-accent-highlight"
         >
           Featured Projects
         </motion.h2>
@@ -39,9 +39,9 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="bg-space-dark/50 border-accent-primary/20 hover:border-accent-primary/50 transition-colors duration-300">
+              <Card className="bg-gradient-to-br from-space-dark/90 to-space-light/90 backdrop-blur-sm border-accent-primary/20 hover:border-accent-primary/50 transition-all duration-300 group hover:shadow-lg hover:shadow-accent-primary/10">
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-200">
+                  <CardTitle className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-purple-100">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
@@ -51,7 +51,7 @@ export const Projects = () => {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-sm bg-accent-primary/20 text-accent-highlight rounded"
+                        className="px-2 py-1 text-sm bg-gradient-to-r from-accent-primary/20 to-accent-highlight/20 text-accent-highlight rounded"
                       >
                         {tech}
                       </span>
